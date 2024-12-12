@@ -3,6 +3,11 @@ body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+
+    background-image: url('Images/LandsknechtVSimps.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    background-position: center 4vw; 
 }
 
 #nav-bar{
