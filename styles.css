@@ -1,0 +1,151 @@
+body{
+    background-color: rgb(26, 26, 26);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#nav-bar{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 4vw;
+    background-color: rgb(59, 59, 59);
+    margin: 0;
+    margin-bottom: 5vh;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+#nav-title{
+    margin-left: 0.5vw ;
+    color: white;
+    font-size: 2.5vw;
+}
+
+#trophy-image{
+    height: 50%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding-top: 2%;
+
+    margin: auto;
+    margin-top: 2vw;
+    width: 80vw;
+    min-height: 40vh;
+    max-height: fit-content;   
+}
+
+#managementContainer{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-flow: row;
+
+}
+
+.nameManagement{
+    display:flex; 
+    justify-content: center; 
+    align-items: center;
+    
+    flex-flow: column;
+
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 1%;
+
+    background-color: rgb(39, 39, 39);
+    border-radius: 15px;
+
+    width:15%; 
+    min-height: 10vh;
+    max-height: fit-content;
+
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+.nameManagement h2{
+    font-size: 1.2vw;
+}
+
+#removeLastNameButton{
+    width: 6vw;
+    height: 20%;
+    text-align: center;
+    font-size: 1vw;
+}
+
+
+#nameInput{
+    width: 50%;
+    height: 3vh;
+    text-align: center;
+}
+
+.playerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background-color: rgb(59,59,59);
+    height: 42vh;
+    width: 20%;
+    border-radius: 2vh;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0), -5px -5px 10px rgb(0, 0, 0);
+}
+
+.playerContainer h2, h4{
+    color: white;
+}
+
+.playerContainer h2{
+    font-size: 1.2vw;
+    text-decoration: underline;
+    margin-top: 0px;
+}
+
+.playerContainer h4{
+    font-size: 0.9vw;
+    margin-right: 5%;
+}
+
+.innerPlayerContainer{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.score-box{
+    width: 25%;
+    height: 45%;
+    border-radius: 15px;
+    border-style: solid;
+}
+
+h3{
+    font-size: 1.2vw;
+    text-decoration: underline; 
+    color:white;
+    margin-top: 0px;
+}
+
+.innerScoreContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* Oi what are you looking at?*/
