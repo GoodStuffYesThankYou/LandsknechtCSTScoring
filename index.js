@@ -124,3 +124,41 @@ function removeIndividual(event) {
     }
     playerContainer.remove();
 }
+
+
+function copyFilledFormat() {
+    const mainSection = document.getElementById("mainSection");
+    const playersContainers = mainSection.querySelectorAll(".playerContainer");
+
+    const attendees = [];
+    const evaluations = [];
+
+    playersContainers.forEach(playerContainer => {
+        const playerName = playerContainer.querySelector("h2").textContent; // Corrected this line
+        attendees.push(playerName);
+
+        const scoreInputs = playerContainer.querySelectorAll(".score-box"); // Fixed class name here
+        const scores = Array.from(scoreInputs).map(input => parseFloat(input.value) || 0);
+
+        const total = scores.reduce((sum, score) => sum + score, 0);
+        
+        let average; // Declared outside the if-else block
+        if (scores.length > 0) {
+            average = (total / scores.length).toFixed(2);
+        } else {
+            average = 1.5;
+        }
+
+        const playerEvaluation = `**${playerName}**\n2v1s: ${scores[0] || 1.5}\nDisadv: ${scores[1] || 1.5}\nBox: ${scores[2] || 1.5}\n**Average: ${average}**`;
+        evaluations.push(playerEvaluation);
+    });
+
+    const filledOutFormat = `• Event: \n• Username:\n• Supervisor:\n• Name of attendees: ${attendees.join(",")}\n• Evaluation of attendees:\n\n${evaluations.join("\n\n")}\n\n• Quota: 0/10 CSTs\n• Assigned scores: Yes/No\nProof:`;
+
+    console.log(filledOutFormat);
+    navigator.clipboard.writeText(filledOutFormat).then(() => {
+        alert("Format has been copied to your clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy text: ", err);
+    });
+}
