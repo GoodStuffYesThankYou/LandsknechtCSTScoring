@@ -153,7 +153,7 @@ function copyFilledFormat() {
         evaluations.push(playerEvaluation);
     });
 
-    const filledOutFormat = `• Event: \n• Username:\n• Supervisor:\n• Name of attendees: ${attendees.join(",")}\n• Evaluation of attendees:\n\n${evaluations.join("\n\n")}\n\n• Quota: 0/10 CSTs\n• Assigned scores: Yes/No\nProof:`;
+    const filledOutFormat = `• Event: \n• Username:\n• Supervisor:\n• Name of attendees: ${attendees.join(", ")}\n• Evaluation of attendees:\n\n${evaluations.join("\n\n")}\n\n• Quota:\n• Assigned scores:\nProof:`;
 
     console.log(filledOutFormat);
     navigator.clipboard.writeText(filledOutFormat).then(() => {
