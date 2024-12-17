@@ -61,7 +61,7 @@ function addName() {
         innerScoreContainer.appendChild(scoreTitle);
 
         const scoreShow = document.createElement("h3");
-        scoreShow.textContent = "0"; // Initialize with 0
+        scoreShow.textContent = "0"; 
         innerScoreContainer.appendChild(scoreShow);
 
         const removeIndividualAttendee = document.createElement("button");
@@ -72,7 +72,6 @@ function addName() {
 }
 
 function calculateAndUpdateAverage(playerContainer) {
-    // Get all score inputs in the current player container
     const scoreInputs = playerContainer.querySelectorAll(".score-box");
     let total = 0;
     let count = 0;
@@ -134,15 +133,15 @@ function copyFilledFormat() {
     const evaluations = [];
 
     playersContainers.forEach(playerContainer => {
-        const playerName = playerContainer.querySelector("h2").textContent; // Corrected this line
+        const playerName = playerContainer.querySelector("h2").textContent; 
         attendees.push(playerName);
 
-        const scoreInputs = playerContainer.querySelectorAll(".score-box"); // Fixed class name here
+        const scoreInputs = playerContainer.querySelectorAll(".score-box"); 
         const scores = Array.from(scoreInputs).map(input => parseFloat(input.value) || 0);
 
         const total = scores.reduce((sum, score) => sum + score, 0);
         
-        let average; // Declared outside the if-else block
+        let average; 
         if (scores.length > 0) {
             average = (total / scores.length).toFixed(2);
         } else {
